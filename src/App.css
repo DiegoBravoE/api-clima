@@ -1,38 +1,61 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+ 
+font-family:Merriweather;
+
+}
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&family=Roboto&display=swap');
+body{
+
+  background-image: url(./img/soleado.jpg);
+  background-repeat: no-repeat;
+  background-size:cover;
+}
+
 .App {
+  
+  background-color: aliceblue;
+  border-radius: 10px;
+  margin:5rem  auto;
+  width: 280px;
+  height: 300px;
+  
+}h1{
   text-align: center;
+  color:rgb(31, 9, 228);
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+ h3{
+  text-align: center;
+  color:rgb(40, 43, 207);
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+ h4{
+ margin-left: 30px;
+ color: tomato;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.icon-temp{
+  width: 45%;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: flex-start;
 }
+.date{
+  margin-left: 120px;
+  margin-top: -100px;
 
-.App-link {
-  color: #61dafb;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.date p{
+  width: max-content;
+  color:rgba(97, 95, 119, 0.74);
+  padding:.5rem 0;
+}
+button{
+  background:rgb(17, 141, 199);
+  color:rgb(31, 9, 228);
+  border-radius: 5px;
+  cursor: pointer;
+  margin:10% 30%;
+  padding: 5px;
+  border:none;
 }
