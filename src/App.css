@@ -9,7 +9,7 @@ font-family:Merriweather;
 @import url('https://fonts.googleapis.com/css2?family=Merriweather&family=Roboto&display=swap');
 body{
 
-  background-image: url(./img/blue-sky.jpg);
+  background-image: url(./img/soleado.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   width: 100vh;
@@ -17,16 +17,17 @@ body{
 }
 
 .App {
-  
+ 
   background-color: aliceblue;
   border-radius: 10px;
   margin:5rem  auto;
   width: 280px;
-  height: 300px;
+  height: 320px;
   
 }h1{
   text-align: center;
   color:rgb(31, 9, 228);
+  padding: 1.5rem ;
 }
  h3{
   text-align: center;
