@@ -49,7 +49,7 @@ const changeTemp = ()=>setIsCelsius(!isCelsius)
         <div className="date">
 
             <p><strong>Weather : {weather.weather?.[0].description}</strong></p>
-            <p><strong>Humidity : {weather.main?.humidity}</strong></p>
+            <p><strong>Humidity : {weather.main?.humidity} %</strong></p>
             <p><strong>Wind : {weather.wind?.speed} km/h</strong></p>
         </div>
            <button onClick={changeTemp}  > <strong>Change F°/C°</strong></button>
