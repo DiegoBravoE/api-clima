@@ -42,7 +42,7 @@ const changeTemp = ()=>setIsCelsius(!isCelsius)
             <h3> City : {weather.name}, '{weather.sys?.country}'</h3>
         <div className="icon-temp">
             <img  src={`http://openweathermap.org/img/wn/${weather.weather?.[0].icon}@2x.png`} alt="" />
-            <h4>{isCelsius ? `${Math.floor(weather.main?.temp -273.15)*9/5+32 } F°`:`${Math.floor((weather.main?.temp -32 *5)/9)} C°`} </h4>
+            <h4>{isCelsius ? `${Math.floor(weather.main?.temp -273.15)*9/5+32 } F°`:`${Math.floor((weather.main?.temp -273.15 ))} C°`} </h4>
             
 
         </div>
