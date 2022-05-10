@@ -8,26 +8,26 @@ const ApiComponente = () => {
 const[weather,setWeather]=useState({})
 const[isCelsius,setIsCelsius]=useState(false)
 const [ isLoading, setIsLoading ] = useState(true);
-useEffect(()=>{
 
+useEffect(()=>{
 function success(pos) {
-    var crd = pos.coords;
-  
-    axios.get(`https://api.openweathermap.org/data/2.5/weather?lat=${crd.latitude}&lon=${crd.longitude}&appid=6b47f1852b39235a024ae0c85ce12472`)
-       .then(res=>{setWeather(res.data)
-        setIsLoading(false)        
-    })
+                var crd = pos.coords;
+            
+                axios.get(`https://api.openweathermap.org/data/2.5/weather?lat=${crd.latitude}&lon=${crd.longitude}&appid=6b47f1852b39235a024ae0c85ce12472`)
+                .then(res=>{setWeather(res.data)
+                    setIsLoading(false)        
+                })
             
        
-  }
+                     }
   
-  function error(err) {
-      console.warn(`ERROR(${err.code}): ${err.message}`);
-    }
+                function error(err) {
+                    console.warn(`ERROR(${err.code}): ${err.message}`);
+                                    }
     
-    navigator.geolocation.getCurrentPosition(success, error);
-},[])
-console.log(weather)
+                navigator.geolocation.getCurrentPosition(success, error);
+      },[])
+
 const changeTemp = ()=>setIsCelsius(!isCelsius)
 
 
@@ -66,14 +66,8 @@ const changeTemp = ()=>setIsCelsius(!isCelsius)
                     )
             }
             </div>
-       
-            
-   
-             
-    
-     
-     
- );
+
+       );
 };
 
 export default ApiComponente;

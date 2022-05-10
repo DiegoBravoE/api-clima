@@ -1,15 +1,11 @@
 import ApiComponente from './ApiComponente'
-
 import './App.css';
 
 function App() {
 
-   
-
-
   return (
     <div >
-   <ApiComponente/>
+          <ApiComponente/>
     </div>
   );
 }
