@@ -27,7 +27,7 @@ function success(pos) {
     
                 navigator.geolocation.getCurrentPosition(success, error);
       },[])
-
+console.log(weather)
 const changeTemp = ()=>setIsCelsius(!isCelsius)
 
 
@@ -50,7 +50,8 @@ const changeTemp = ()=>setIsCelsius(!isCelsius)
                         <div className="icon-temp">
                             <img  src={`http://openweathermap.org/img/wn/${weather.weather?.[0].icon}@2x.png`} alt="" />
                             <h4>{isCelsius ? `${Math.floor(weather.main?.temp -273.15)*9/5+32 } F°`:`${Math.floor((weather.main?.temp -273.15 ))} C°`} </h4>
-                        
+                            <h6> Min :{isCelsius ?`${Math.floor(weather.main?.temp_min -273.15)*9/5+32 } F°`  :`${Math.floor((weather.main?.temp_min-273.15 ))} C°`} -
+                               Max: {isCelsius ? `${Math.floor(weather.main?.temp_max -273.15)*9/5+32 } F°`:`${Math.floor((weather.main?.temp_max-273.15 ))} C°`} </h6>
                         </div>
                         <div className="date">
 

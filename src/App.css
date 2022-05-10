@@ -19,11 +19,11 @@ img{
 
 .App {
   box-shadow: -7px -3px 60px 12px rgba(0,0,0,0.7);
-  background-color: rgba(124, 178, 180, 0.733);
+  background-color: rgba(124, 178, 180, 0.568);
   border-radius: 10px;
   margin:5rem  auto;
   width: 380px;
-  height: 380px;
+  height: 400px;
   
 }h1{
   text-align: center;
@@ -36,6 +36,10 @@ img{
 }
  h4{
  color: tomato;
+}
+h6{
+  margin-top: 10px;
+  color: tomato;
 }
 .icon-temp{
   width: 45%;
