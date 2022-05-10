@@ -41,7 +41,7 @@ const changeTemp = ()=>setIsCelsius(!isCelsius)
          <div className="App">
           {
 isLoading?(
-   <img className="loading" src="../img/rotate.png" alt="" / >
+   <img src="./img/rotate.png" alt="" / >
            ):(
 
             <div>
