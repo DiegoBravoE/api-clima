@@ -42,9 +42,10 @@ const changeTemp = ()=>setIsCelsius(!isCelsius)
           {
 isLoading?(
     
-    <div class="loadingio-spinner-eclipse-3av56ck46fl"><div class="ldio-8zcwjji7if5">
-<div></div>
-</div></div>
+    <div class="loadingio-spinner-eclipse-3av56ck46fl">
+        <div class="ldio-8zcwjji7if5">
+        <div></div>
+        </div></div>
 
 
 

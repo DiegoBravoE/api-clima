@@ -78,13 +78,15 @@ button{
   animation: ldio-8zcwjji7if5 1s linear infinite;
   width: 160px;
   height: 160px;
-  top: 100px;
-  left: 100px;
+  margin-top: 20px;
+  left: 20px;
   border-radius: 50%;
   box-shadow: 0 4px 0 0 #3541e0;
   transform-origin: 80px 82px;
 }
 .loadingio-spinner-eclipse-3av56ck46fl {
+  margin:100px 100px;
+  
   width: 200px;
   height: 200px;
   display: inline-block;
