@@ -21,7 +21,7 @@ img{
 
 .App {
   box-shadow: -7px -3px 60px 12px rgba(0,0,0,0.7);
-  background-color: rgb(124, 178, 180);
+  background-color: rgba(124, 178, 180, 0.733);
   border-radius: 10px;
   margin:5rem  auto;
   width: 380px;
@@ -49,12 +49,13 @@ img{
  
 }
 .date{
-  margin-left: 170px;
+  margin-left: 230px;
   margin-top: -132px;
 
 }
 .date p{
   width: max-content;
+  font-size: 10px;
   color:rgba(116, 109, 179, 0.984);
   padding:.5rem 0;
 }
@@ -66,4 +67,8 @@ button{
   margin:15% 40%;
   padding: 5px;
   border:none;
+}
+.loading{
+  background-color: brown;
+  
 }

@@ -7,7 +7,7 @@ const ApiComponente = () => {
 
 const[weather,setWeather]=useState({})
 const[isCelsius,setIsCelsius]=useState(false)
-
+const [ isLoading, setIsLoading ] = useState(true);
 useEffect(()=>{
 
 function success(pos) {
@@ -19,7 +19,7 @@ function success(pos) {
     console.log(`More or less ${crd.accuracy} meters.`);
     axios.get(`https://api.openweathermap.org/data/2.5/weather?lat=${crd.latitude}&lon=${crd.longitude}&appid=6b47f1852b39235a024ae0c85ce12472`)
        .then(res=>{setWeather(res.data)
-                  
+        setIsLoading(false)        
     })
             
        
@@ -36,26 +36,46 @@ const changeTemp = ()=>setIsCelsius(!isCelsius)
 
 
     return (
-        <div className="App">
+        
+     
+         <div className="App">
+          {
+isLoading?(
+   <img className="loading" src="../img/rotate.png" alt="" / >
+           ):(
 
-            <h1>Weather App</h1>
-            <h3> City : {weather.name}, '{weather.sys?.country}'</h3>
-        <div className="icon-temp">
-            <img  src={`http://openweathermap.org/img/wn/${weather.weather?.[0].icon}@2x.png`} alt="" />
-            <h4>{isCelsius ? `${Math.floor(weather.main?.temp -273.15)*9/5+32 } F°`:`${Math.floor((weather.main?.temp -273.15 ))} C°`} </h4>
+            <div>
+
+
+                <h1>Weather App</h1>
+                <h3> City : {weather.name}, '{weather.sys?.country}'</h3>
+            <div className="icon-temp">
+                <img  src={`http://openweathermap.org/img/wn/${weather.weather?.[0].icon}@2x.png`} alt="" />
+                <h4>{isCelsius ? `${Math.floor(weather.main?.temp -273.15)*9/5+32 } F°`:`${Math.floor((weather.main?.temp -273.15 ))} C°`} </h4>
             
+            </div>
+            <div className="date">
 
-        </div>
-        <div className="date">
+                <p><strong>Weather : {weather.weather?.[0].description}</strong></p>
+                <p><strong>Humidity : {weather.main?.humidity} %</strong></p>
+                <p><strong>Wind : {weather.wind?.speed} km/h</strong></p>
+                <p><strong>Pressure : {weather.main?.pressure} </strong></p>
+            </div>
+            <button onClick={changeTemp}  > <strong>Change F°/C°</strong></button>
 
-            <p><strong>Weather : {weather.weather?.[0].description}</strong></p>
-            <p><strong>Humidity : {weather.main?.humidity} %</strong></p>
-            <p><strong>Wind : {weather.wind?.speed} km/h</strong></p>
-        </div>
-           <button onClick={changeTemp}  > <strong>Change F°/C°</strong></button>
-
-        </div>
-    );
+            </div>
+    
+               )
+            }
+            </div>
+       
+            
+   
+             
+    
+     
+     
+ );
 };
 
 export default ApiComponente;
