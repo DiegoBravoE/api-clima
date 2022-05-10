@@ -49,11 +49,12 @@ img{
  
 }
 .date{
-  margin-left: 230px;
+  margin-left: 210px;
   margin-top: -132px;
-
+  
 }
 .date p{
+  
   width: max-content;
   font-size: 10px;
   color:rgba(116, 109, 179, 0.984);
